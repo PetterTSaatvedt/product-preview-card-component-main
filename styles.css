@@ -68,6 +68,9 @@ body {
   font-family: var(--font-montserrat);
   background-color: var(--cream);
   padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
@@ -75,7 +78,7 @@ body {
   border-radius: 0.5rem;
 }
 
-img {
+picture img {
   border-radius: 0.5rem 0.5rem 0 0;
 }
 
@@ -142,4 +145,40 @@ button {
 
 button:hover, button:active {
   background-color: hsl(158, 36%, 22%);
+}
+
+@media (min-width: 600px) {
+  .card {
+    display: flex;
+    max-width: 600px;
+  }
+
+  picture {
+    width: 50%;
+  }
+
+  picture img {
+    border-radius: 0.5rem 0 0 0.5rem;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card-content {
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: 0 0.5rem 0.5rem 0;
+    width: 50%;
+  }
+
+  .price {
+    margin-top: 1.5rem;
+  }
+
+  .card-content h2 {
+    margin: 1rem 0 1.5rem;
+  }
+
+  button {
+    margin-top: 1.25rem;
+  }
 }
